@@ -90,6 +90,8 @@ Install mysql on your db server sudo yum update sudo yum install mysql-server
 
 Verify that the service is up and running by using sudo systemctl status mysqld, if it is not running, restart the service and enable it so it will be running even after reboot: sudo systemctl restart mysqld sudo systemctl enable mysqld Step 7: Configure DB to work with wordpress
 
+![Pro6-Status Apache](https://user-images.githubusercontent.com/117018714/210462231-70d5be01-948f-49d7-b463-4c9b703d816e.png)
 
+Configure DB to work with WordPress sudo mysql CREATE DATABASE wordpress; CREATE USER myuser@<Web-Server-Private-IP-Address> IDENTIFIED BY 'mypass'; GRANT ALL ON wordpress.* TO 'myuser'@''; FLUSH PRIVILEGES; SHOW DATABASES; exit
 
 
